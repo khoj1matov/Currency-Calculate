@@ -1,6 +1,7 @@
 import 'package:currencyconverterapp/components/text_style_comp.dart';
 import 'package:currencyconverterapp/constants/color_const.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
@@ -36,6 +37,7 @@ class HomeView extends StatelessWidget {
                 child: Column(
                   children: [
                     _textFromField(_controller),
+                    SvgPicture.asset("assets/icons/exchange.svg"),
                     _textFromField(_controller),
                   ],
                 ),
