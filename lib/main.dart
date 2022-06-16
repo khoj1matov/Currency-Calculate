@@ -1,4 +1,4 @@
-import 'package:currencyconverterapp/constants/color_const.dart';
+import 'package:currencyconverterapp/core/constants/color_const.dart';
 import 'package:currencyconverterapp/routes/router.dart';
 import 'package:flutter/material.dart';
 
