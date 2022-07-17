@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.khoj1matov.currencyconverterapp">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="Converter"
         android:name="${applicationName}"

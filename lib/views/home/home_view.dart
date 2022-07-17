@@ -56,9 +56,9 @@ class _HomeViewState extends State<HomeView> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            top: 40, bottom: 20, left: 20, right: 20),
+                            top: 40, left: 20, right: 20, bottom: 20),
                         child: Text(
-                          "Currency Converter",
+                          "Currency Calculator",
                           style: TextStyleComp.appBarTitleTS,
                         ),
                       ),
