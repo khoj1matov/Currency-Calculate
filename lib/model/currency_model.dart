@@ -23,13 +23,4 @@ class CurrencyModel {
         nbuCellPrice: json["nbu_cell_price"],
         date: json["date"],
       );
-
-  // Map<String, dynamic> toJson() => {
-  //       "title": title,
-  //       "code": code,
-  //       "cb_price": cbPrice,
-  //       "nbu_buy_price": nbuBuyPrice,
-  //       "nbu_cell_price": nbuCellPrice,
-  //       "date": date,
-  //     };
 }

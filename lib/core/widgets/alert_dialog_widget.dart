@@ -8,7 +8,7 @@ class AlertDialogWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       title: Text(
         "Select Flag",
-        style: TextStyleComp.textFromFieldTextStyle,
+        style: TextStyleComp.textFromFieldTS,
       ),
       content: SingleChildScrollView(
         child: SizedBox(
@@ -21,7 +21,7 @@ class AlertDialogWidget {
                   children: [
                     Text(
                       currency,
-                      style: TextStyleComp.textFromFieldTextStyle,
+                      style: TextStyleComp.textFromFieldTS,
                     ),
                     Container(
                       padding: const EdgeInsets.all(2),

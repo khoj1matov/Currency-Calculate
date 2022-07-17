@@ -11,7 +11,7 @@ class MyRoutes {
 
     switch (s.name) {
       case '/home':
-        return MaterialPageRoute(builder: (_) =>  HomeView());
+        return MaterialPageRoute(builder: (_) => const HomeView());
     }
   }
 }
