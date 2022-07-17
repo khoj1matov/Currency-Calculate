@@ -1,1 +1,1 @@
-<img src="./screenshots/home.png" width="19%"> <img src="./screenshots/connection.png" width="19%">
+<img src="./screenshots/home.png" width="48%"> <img src="./screenshots/connection.png" width="48%">
