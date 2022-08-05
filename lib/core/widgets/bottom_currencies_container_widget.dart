@@ -11,8 +11,8 @@ class BottomCurrenciesWidget {
   static Container bottomCurrenciesContainer(
       BuildContext context, List<CurrencyModel> data) {
     return Container(
-      padding: const EdgeInsets.only(left: 15, right: 10, top: 2),
-      height: MediaQuery.of(context).size.height * 0.4155,
+      padding: const EdgeInsets.only(top: 5),
+      height: MediaQuery.of(context).size.height * 0.4625,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: ColorConst.backGroundColor,
@@ -22,29 +22,38 @@ class BottomCurrenciesWidget {
         ),
       ),
       child: ListView.builder(
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
         itemBuilder: (context, index) {
           return InkWell(
-            child: ListTile(
-              contentPadding: const EdgeInsets.all(10),
-              leading: Flag.fromString(
-                FlagList.flags[index]["flag"].toString(),
-                height: 50,
-                width: 50,
-                fit: BoxFit.fill,
-                borderRadius: 40,
-              ),
-              title: Text(
-                data[index].code.toString(),
-                style: TextStyleComp.appBarTitleTS,
-              ),
-              trailing: Text(
-                data[index].cbPrice.toString(),
-                style: TextStyleComp.appBarTitleTS,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Row(
+                children: [
+                  Flag.fromString(
+                    FlagList.flags[index]["flag"].toString(),
+                    height: 50,
+                    width: 50,
+                    fit: BoxFit.fill,
+                    borderRadius: 40,
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    "1 (${data[index].code!})",
+                    style: TextStyleComp.appBarTitleTS,
+                  ),
+                  SizedBox(width: 10),
+                  Text("=", style: TextStyleComp.appBarTitleTS),
+                  SizedBox(width: 10),
+                  Text(
+                    "${data[index].cbPrice.toString()} (UZS)",
+                    style: TextStyleComp.appBarTitleTS,
+                  ),
+                ],
               ),
             ),
             onTap: () {
               Provider.of<ExchangeProvider>(context, listen: false)
-                  .onChangedFlag(index);
+                  .onChangedFlag(index, data[index].code!);
             },
           );
         },

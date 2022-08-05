@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ContainerWidget {
   static Container container(BuildContext context, Widget child) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.851,
+      height: MediaQuery.of(context).size.height * 0.89423,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: ColorConst.kPrimaryWhite,

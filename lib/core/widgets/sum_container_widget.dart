@@ -26,10 +26,22 @@ class SumContainer {
           color: ColorConst.backGroundColor,
         ),
       ),
-      child: Center(
-        child: Text(
-          "${double.parse(TextFieldWidget.globalController) * context.watch<ExchangeProvider>().amount}",
-          style: TextStyleComp.textFromFieldTS,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.68,
+              child: Text(
+                "${double.parse(TextFieldWidget.globalController) * context.watch<ExchangeProvider>().amount}",
+                style: TextStyleComp.textFromFieldTS,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            Text("UZS", style: TextStyleComp.textFromFieldTS),
+          ],
         ),
       ),
     );

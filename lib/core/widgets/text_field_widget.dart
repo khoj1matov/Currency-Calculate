@@ -1,6 +1,8 @@
 import 'package:currencyconverterapp/core/components/text_style_comp.dart';
 import 'package:currencyconverterapp/core/constants/color_const.dart';
+import 'package:currencyconverterapp/provider/exchange_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class TextFieldWidget {
   static String globalController = "0.0";
@@ -10,11 +12,17 @@ class TextFieldWidget {
   ) {
     return TextFormField(
       keyboardType: TextInputType.number,
-      textAlign: TextAlign.center,
       style: TextStyleComp.textFromFieldTS,
       controller: controller,
       cursorColor: ColorConst.backGroundColor,
       decoration: InputDecoration(
+        suffixIcon: Padding(
+          padding: const EdgeInsets.only(top: 15, bottom: 15, right: 20),
+          child: Text(
+            context.watch<ExchangeProvider>().code,
+            style: TextStyleComp.textFromFieldTS,
+          ),
+        ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(40),
           borderSide: BorderSide(color: ColorConst.backGroundColor, width: 2),

@@ -49,40 +49,38 @@ class _HomeViewState extends State<HomeView> {
                 );
               } else {
                 var data = snapshot.data;
-                return SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      TitleWidget.title("Currency Calculator"),
-                      ContainerWidget.container(
-                        context,
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            AmountTitleWidget.enterAmount(),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                left: 20,
-                                top: 5,
-                                right: 20,
-                                bottom: 20,
-                              ),
-                              child: TextFieldWidget.textFromField(
-                                context,
-                                _controller,
-                              ),
+                return Column(
+                  children: [
+                    TitleWidget.title("Currency Calculator"),
+                    ContainerWidget.container(
+                      context,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          AmountTitleWidget.enterAmount(),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 20,
+                              top: 5,
+                              right: 20,
+                              bottom: 20,
                             ),
-                            FlagsAndExchange.flagsAndExchange(context, data!),
-                            AmountTitleWidget.sumAmount(),
-                            SumContainer.sumContainer(context),
-                            BottomCurrenciesWidget.bottomCurrenciesContainer(
+                            child: TextFieldWidget.textFromField(
                               context,
-                              data,
-                            )
-                          ],
-                        ),
+                              _controller,
+                            ),
+                          ),
+                          FlagsAndExchange.flagsAndExchange(context, data!),
+                          AmountTitleWidget.sumAmount(),
+                          SumContainer.sumContainer(context),
+                          BottomCurrenciesWidget.bottomCurrenciesContainer(
+                            context,
+                            data,
+                          )
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 );
               }
             }),

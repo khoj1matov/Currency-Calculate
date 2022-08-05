@@ -4,12 +4,12 @@ import 'package:flutter/cupertino.dart';
 class TextStyleComp {
   static get appBarTitleTS => TextStyle(
         color: ColorConst.kPrimaryWhite,
-        fontSize: 25,
+        fontSize: 22,
         fontWeight: FontWeight.bold,
       );
   static get textFromFieldTS => TextStyle(
         color: ColorConst.backGroundColor,
-        fontSize: 25,
+        fontSize: 22,
         fontWeight: FontWeight.bold,
       );
 
