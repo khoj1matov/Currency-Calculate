@@ -16,6 +16,8 @@ class TextFieldWidget {
       controller: controller,
       cursorColor: ColorConst.backGroundColor,
       decoration: InputDecoration(
+        hintText: "0.0",
+        hintStyle: TextStyleComp.textFromFieldTS,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(top: 15, bottom: 15, right: 20),
           child: Text(
